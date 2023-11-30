@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "test",
-    "slug": "test",
+    "name": "insta_clone",
+    "slug": "insta_clone",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

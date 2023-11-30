@@ -2,6 +2,7 @@ import { ScrollView, Text, View, useColorMode } from '@gluestack-ui/themed';
 import { Ionicons } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Feather, SimpleLineIcons, FontAwesome5 } from '@expo/vector-icons';
 
 export default function Main(){
   const colorMode = useColorMode();
@@ -9,7 +10,7 @@ export default function Main(){
 
   const GradientBorder = ({ children }: any) => {
     return (
-      <View style={{ width: '100%', height: 'auto' }}>
+      <View style={{ width: '99%', height: 'auto' }}>
         <LinearGradient
           colors={['#ffd900', '#C913B9']}
           start={{ x: 0, y: 0.9 }}
@@ -133,8 +134,8 @@ export default function Main(){
               borderWidth={2}
               alignItems='center'
               justifyContent='center'
-              width={60}
-              height={60}
+              width={65}
+              height={65}
               bg='#333'
               borderRadius={40}
 
@@ -161,13 +162,21 @@ export default function Main(){
           }}
       >
 
-        <View flexDirection='row' alignItems='center' justifyContent='flex-start' flex={1} width={350}>
-          <TouchableOpacity style={{marginRight: 10, marginTop: 10}}>
-            <GradientBorder>
-              <View width={40} height={40} bg='#333' borderRadius={30}></View>
-            </GradientBorder>
+        <View justifyContent='space-between' flexDirection='row' alignItems='center' paddingRight={10} >
+          <View flexDirection='row' alignItems='center' justifyContent='flex-start' flex={1} width={350} padding={10} >
+
+            <TouchableOpacity >
+              <GradientBorder>
+                <View width={40} height={40} bg='#333' borderRadius={30}></View>
+              </GradientBorder>
+            </TouchableOpacity>
+            <Text color={color} fontSize={14} marginLeft={10}>thur_gtr</Text>
+
+          </View>
+
+          <TouchableOpacity style={{ marginRight: 10}}>
+            <SimpleLineIcons name="options" size={20} color={color} />
           </TouchableOpacity>
-          <Text color={color} marginTop={10}>thur_gtr</Text>
         </View>
 
 
@@ -187,10 +196,10 @@ export default function Main(){
 
       >
         <TouchableOpacity>
-          <Ionicons
-            name='home-outline'
-            color={color}
+          <Feather
+            name='home'
             size={25}
+            color={color}
           />
         </TouchableOpacity>
 
@@ -213,20 +222,12 @@ export default function Main(){
 
 
         <TouchableOpacity>
-          <Ionicons
-            name='card-outline'
-            color={color}
-            size={25}
-          />
+          <Feather name="shopping-bag" size={25} color={color} />
         </TouchableOpacity>
 
 
         <TouchableOpacity>
-          <Ionicons
-            name='person-circle'
-            color={color}
-            size={25}
-          />
+          <FontAwesome5 name="user-circle" size={24} color={color} />
         </TouchableOpacity>
 
       </View>
