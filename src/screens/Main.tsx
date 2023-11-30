@@ -2,7 +2,7 @@ import { ScrollView, Text, View, useColorMode } from '@gluestack-ui/themed';
 import { Ionicons } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Feather, SimpleLineIcons, FontAwesome5 } from '@expo/vector-icons';
+import { Feather, SimpleLineIcons, FontAwesome5, AntDesign, Octicons } from '@expo/vector-icons';
 
 export default function Main(){
   const colorMode = useColorMode();
@@ -48,7 +48,12 @@ export default function Main(){
         justifyContent='space-between'
         flexDirection='row'
       >
-        <Text fontWeight='700'> MARGATSNI</Text>
+        <View flexDirection='row' alignItems='center' gap={6}>
+          <Text fontWeight='700'> MARGATSNI</Text>
+          <TouchableOpacity>
+            <AntDesign name="down" size={16} color={color} />
+          </TouchableOpacity>
+        </View>
 
         <View flexDirection='row' gap={20}>
           <TouchableOpacity>
@@ -65,13 +70,7 @@ export default function Main(){
               size={25}
             />
           </TouchableOpacity>
-          <TouchableOpacity>
-            <Ionicons
-              name='add-circle-outline'
-              color={color}
-              size={25}
-            />
-          </TouchableOpacity>
+
 
 
         </View>
@@ -149,7 +148,7 @@ export default function Main(){
 
 
       <ScrollView
-        bg={colorMode === 'light' ? '#eee' : '#151515'}
+        bg={colorMode === 'light' ? '#eee' : '#000'}
         maxHeight={'100%'}
         flex={1}
         padding={20}
@@ -161,24 +160,50 @@ export default function Main(){
             gap: 20
           }}
       >
+        <View flex={1} width={'100%'} height={'100%'}>
+          <View
+            justifyContent='space-between'
+            flexDirection='row'
+            alignItems='center'
+            paddingRight={10}
+            height={60}>
+            <View
+              flexDirection='row'
+              alignItems='center'
+              justifyContent='flex-start'
+              flex={1}
+              width={350}
+              paddingTop={10}
+              paddingHorizontal={10}>
 
-        <View justifyContent='space-between' flexDirection='row' alignItems='center' paddingRight={10} >
-          <View flexDirection='row' alignItems='center' justifyContent='flex-start' flex={1} width={350} padding={10} >
+              <TouchableOpacity>
+                <GradientBorder>
+                  <View
+                    width={40}
+                    height={40}
+                    bg='#333'
+                    borderRadius={30}>
 
-            <TouchableOpacity >
-              <GradientBorder>
-                <View width={40} height={40} bg='#333' borderRadius={30}></View>
-              </GradientBorder>
+                  </View>
+                </GradientBorder>
+              </TouchableOpacity>
+              <Text
+                color={color}
+                fontSize={14}
+                marginLeft={10}>
+                  thur_gtr
+              </Text>
+            </View>
+
+            <TouchableOpacity style={{  marginTop: 10}}>
+              <SimpleLineIcons name="options" size={20} color={color} />
             </TouchableOpacity>
-            <Text color={color} fontSize={14} marginLeft={10}>thur_gtr</Text>
 
           </View>
+          <View maxWidth={'100%'} height={380} bg='#fff' marginTop={5}>
 
-          <TouchableOpacity style={{ marginRight: 10}}>
-            <SimpleLineIcons name="options" size={20} color={color} />
-          </TouchableOpacity>
+          </View>
         </View>
-
 
       </ScrollView>
 
@@ -213,17 +238,19 @@ export default function Main(){
 
 
         <TouchableOpacity>
-          <Ionicons
-            name='videocam'
-            color={color}
-            size={25}
-          />
+          <Octicons
+            name="diff-added"
+            size={24}
+            color={color} />
         </TouchableOpacity>
-
 
         <TouchableOpacity>
-          <Feather name="shopping-bag" size={25} color={color} />
+          <Octicons
+            name="device-camera-video"
+            size={24}
+            color={color} />
         </TouchableOpacity>
+
 
 
         <TouchableOpacity>
