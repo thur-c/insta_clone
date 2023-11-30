@@ -1,4 +1,4 @@
-import { ScrollView, Text, View, useColorMode } from '@gluestack-ui/themed';
+import { Image, ScrollView, Text, View, useColorMode } from '@gluestack-ui/themed';
 import { Ionicons } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -200,8 +200,111 @@ export default function Main(){
             </TouchableOpacity>
 
           </View>
-          <View maxWidth={'100%'} height={380} bg='#fff' marginTop={5}>
+          <View maxWidth={'100%'} height={380} marginTop={5} alignItems='center' justifyContent='center'>
+            <Image
+              style={{width: 375, height: '100%' }}
+              source='https://thumbs2.imgbox.com/64/10/eB543162_t.jpg'
+              accessibilityLabel='Gatinho'
+              alt='Gatinho'
+            />
+          </View>
+        </View>
+        <View flex={1} width={'100%'} height={'100%'}>
+          <View
+            justifyContent='space-between'
+            flexDirection='row'
+            alignItems='center'
+            paddingRight={10}
+            height={60}>
+            <View
+              flexDirection='row'
+              alignItems='center'
+              justifyContent='flex-start'
+              flex={1}
+              width={350}
+              paddingTop={10}
+              paddingHorizontal={10}>
 
+              <TouchableOpacity>
+                <GradientBorder>
+                  <View
+                    width={40}
+                    height={40}
+                    bg='#333'
+                    borderRadius={30}>
+
+                  </View>
+                </GradientBorder>
+              </TouchableOpacity>
+              <Text
+                color={color}
+                fontSize={14}
+                marginLeft={10}>
+                  thur_gtr
+              </Text>
+            </View>
+
+            <TouchableOpacity style={{  marginTop: 10}}>
+              <SimpleLineIcons name="options" size={20} color={color} />
+            </TouchableOpacity>
+
+          </View>
+          <View maxWidth={'100%'} height={380} marginTop={5} alignItems='center' justifyContent='center'>
+            <Image
+              style={{width: 375, height: '100%' }}
+              source='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCXsbUwbvbDDyt-rtsoYDyFpcIHRjzgK286Q&usqp=CAU'
+              accessibilityLabel='Gatinho'
+              alt='Gatinho'
+            />
+          </View>
+        </View>
+        <View flex={1} width={'100%'} height={'100%'}>
+          <View
+            justifyContent='space-between'
+            flexDirection='row'
+            alignItems='center'
+            paddingRight={10}
+            height={60}>
+            <View
+              flexDirection='row'
+              alignItems='center'
+              justifyContent='flex-start'
+              flex={1}
+              width={350}
+              paddingTop={10}
+              paddingHorizontal={10}>
+
+              <TouchableOpacity>
+                <GradientBorder>
+                  <View
+                    width={40}
+                    height={40}
+                    bg='#333'
+                    borderRadius={30}>
+
+                  </View>
+                </GradientBorder>
+              </TouchableOpacity>
+              <Text
+                color={color}
+                fontSize={14}
+                marginLeft={10}>
+                  thur_gtr
+              </Text>
+            </View>
+
+            <TouchableOpacity style={{  marginTop: 10}}>
+              <SimpleLineIcons name="options" size={20} color={color} />
+            </TouchableOpacity>
+
+          </View>
+          <View maxWidth={'100%'} height={380} marginTop={5} alignItems='center' justifyContent='center'>
+            <Image
+              style={{width: 375, height: '100%' }}
+              source='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8UqaMZ5TMfDLW8vWc32DjAwsC_IOzXDB7PWtm9qO969Yc1w7EA_iJq54DyU0qgF_g3oU&usqp=CAU'
+              accessibilityLabel='Gatinho'
+              alt='Gatinho'
+            />
           </View>
         </View>
 
